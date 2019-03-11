@@ -11,7 +11,12 @@ DIST_DIRS := find * -type d -exec
 bin/$(NAME): $(SRCS)
 	go build -a -tags netgo -installsuffix netgo $(LDFLAGS) -o bin/$(NAME)
 
-deps:
+dep:
+ifeq ($(shell command -v dep 2> /dev/null),)
+	curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
+endif
+
+deps: dep
 	dep ensure
 
 fmt:
