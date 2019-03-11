@@ -1,0 +1,4 @@
+scheduler:
+  name: test-scheduler
+  interval: 1s
+  command: cat default-message.md

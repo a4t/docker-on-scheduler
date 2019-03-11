@@ -1,0 +1,11 @@
+[[constraint]]
+  branch = "master"
+  name = "github.com/bamzi/jobrunner"
+
+[[constraint]]
+  branch = "master"
+  name = "github.com/go-yaml/yaml"
+
+[prune]
+  go-tests = true
+  unused-packages = true
